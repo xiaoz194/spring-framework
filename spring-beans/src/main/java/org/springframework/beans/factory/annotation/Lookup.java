@@ -56,6 +56,12 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Lookup {
+	/**
+	 * And please remember that lookup methods
+	 *  * won't work on beans returned from {@code @Bean} methods in configuration classes
+	 *
+	 * @Bean方式注册的Bean Lookup注解不生效!!!
+	 * **/
 
 	/**
 	 * This annotation attribute may suggest a target bean name to look up.

@@ -56,6 +56,10 @@ import java.lang.annotation.Target;
 public @interface Import {
 
 	/**
+	 *
+	 * 1. 直接写class, 创建出来的对象名称是全类名，且属性都是null  无参构造器创建出对象放在容器中，没有后续了
+	 * 2. ImportSelector
+	 * 3. ImportBeanDefinitionRegistrar
 	 * {@link Configuration @Configuration}, {@link ImportSelector},
 	 * {@link ImportBeanDefinitionRegistrar}, or regular component classes to import.
 	 */
