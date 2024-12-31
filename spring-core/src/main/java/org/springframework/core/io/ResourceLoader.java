@@ -64,6 +64,8 @@ public interface ResourceLoader {
 	 * @see Resource#exists()
 	 * @see Resource#getInputStream()
 	 */
+
+	// 策略模式 有多种getResource的实现
 	Resource getResource(String location);
 
 	/**

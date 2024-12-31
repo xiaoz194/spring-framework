@@ -60,7 +60,7 @@ public @interface Lookup {
 	 * And please remember that lookup methods
 	 *  * won't work on beans returned from {@code @Bean} methods in configuration classes
 	 *
-	 * @Bean方式注册的Bean Lookup注解不生效!!!
+	 * 如果是 @Bean 方式注册的Bean Lookup注解不生效!!!
 	 * **/
 
 	/**
