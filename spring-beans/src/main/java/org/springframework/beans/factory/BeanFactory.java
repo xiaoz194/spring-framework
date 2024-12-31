@@ -32,7 +32,7 @@ import org.springframework.lang.Nullable;
  *
  * <p>This interface is implemented by objects that hold a number of bean definitions,
  *
- * 保存很多bean定义信息（BeanDefinition）
+ * 保存很多bean定义信息（BeanDefinition） 都有唯一的名字
  *
  * each uniquely identified by a String name. Depending on the bean definition,
  * the factory will return either an independent instance of a contained object
