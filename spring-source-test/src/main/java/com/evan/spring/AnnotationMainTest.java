@@ -1,5 +1,6 @@
 package com.evan.spring;
 
+import com.evan.spring.bean.Car;
 import com.evan.spring.bean.Cat;
 import com.evan.spring.bean.Dog;
 import com.evan.spring.bean.Person;
@@ -11,26 +12,32 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AnnotationMainTest {
 	public static void main(String[] args) {
-		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
-		Person person = applicationContext.getBean(Person.class);
-		System.out.println(person);
+
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		Car bean = context.getBean(Car.class);
+		System.out.println(bean);
 
 
-
-
-		System.out.println("==================================");
-
-		// 最上层 ListableBeanFactory
-		String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-		for (String name: beanDefinitionNames) {
-			System.out.println(name);
-		}
-
-		Dog dog = (Dog)applicationContext.getBean("bigdog");
-		System.out.println(dog);
-
-		Dog dog1 = (Dog)applicationContext.getBean("dog");
-		System.out.println(dog1);
+//		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
+//		Person person = applicationContext.getBean(Person.class);
+//		System.out.println(person);
+//
+//
+//
+//
+//		System.out.println("==================================");
+//
+//		// 最上层 ListableBeanFactory
+//		String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+//		for (String name: beanDefinitionNames) {
+//			System.out.println(name);
+//		}
+//
+//		Dog dog = (Dog)applicationContext.getBean("bigdog");
+//		System.out.println(dog);
+//
+//		Dog dog1 = (Dog)applicationContext.getBean("dog");
+//		System.out.println(dog1);
 
 
 //		System.out.println("==================================");
