@@ -20,6 +20,7 @@ public class AnnotationMainTest {
 
 		System.out.println("==================================");
 
+		// 最上层 ListableBeanFactory
 		String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
 		for (String name: beanDefinitionNames) {
 			System.out.println(name);

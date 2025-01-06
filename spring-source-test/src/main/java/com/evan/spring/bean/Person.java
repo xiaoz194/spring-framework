@@ -6,16 +6,21 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
+
+	public Person(Cat cat) {
+		System.out.println("11111," + cat);
+	}
+
 	private String name;
 
-//	@Autowired
+	@Autowired
 	private Cat cat;
 
 	public String getName() {
 		return name;
 	}
 
-	@Lookup
+	//@Lookup
 	public Cat getCat() {
 		return cat;
 	}
