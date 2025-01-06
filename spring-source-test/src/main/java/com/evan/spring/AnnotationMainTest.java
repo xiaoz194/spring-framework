@@ -13,18 +13,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AnnotationMainTest {
 	public static void main(String[] args) {
 
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		Car bean = context.getBean(Car.class);
-		System.out.println(bean);
 
 
-//		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
-//		Person person = applicationContext.getBean(Person.class);
-//		System.out.println(person);
-//
-//
-//
-//
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
+		Person person = applicationContext.getBean(Person.class);
+		System.out.println(person);
+
+
+
+
 //		System.out.println("==================================");
 //
 //		// 最上层 ListableBeanFactory
