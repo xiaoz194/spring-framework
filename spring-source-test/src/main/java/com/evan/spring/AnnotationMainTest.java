@@ -17,7 +17,8 @@ public class AnnotationMainTest {
 
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
 		Person person = applicationContext.getBean(Person.class);
-		System.out.println(person);
+		ApplicationContext context = person.getContext();
+		System.out.println(context == applicationContext);
 
 
 
